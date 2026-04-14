@@ -16,7 +16,15 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       // step 2: call the widget
-      home: CardAppWidget(),
+      home: Scaffold(
+        appBar: AppBar(title: Text("App bar")),
+        body: Column(
+          children: [
+            CardAppWidget(title: "hello", image: "", date: ""),
+    CardAppWidget(title: "hello", image: "", date: ""),
+          ],
+        ),
+      ),
     );
   }
 }
