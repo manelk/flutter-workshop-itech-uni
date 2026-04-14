@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             CardAppWidget(title: "hello", image: "", date: ""),
-    CardAppWidget(title: "hello", image: "", date: ""),
+            CardAppWidget(title: "hello", image: "", date: ""),
           ],
         ),
       ),
