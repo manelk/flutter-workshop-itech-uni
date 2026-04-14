@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../apod_data.dart';
+
 // new widget to display a text as a title and a description and image
 class CardAppWidget extends StatelessWidget {
   const CardAppWidget({super.key});
@@ -20,11 +22,11 @@ class CardAppWidget extends StatelessWidget {
           clipBehavior: Clip.hardEdge,
           child: Column(
             children: [
-              Text("This is a title"),
-              Text("This is a title"),
+              Text(listItems[0].title),
+              Text(listItems[0].date),
               // Image.asset("assets/image1.jpeg"),
               Image.network(
-                "https://ies.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                listItems[0].url,
                 errorBuilder:
                     (
                     BuildContext context,
