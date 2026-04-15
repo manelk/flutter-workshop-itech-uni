@@ -18,9 +18,15 @@ class MyApp extends StatelessWidget {
       // step 2: call the widget
       home: Scaffold(
         appBar: AppBar(title: Text("App bar")),
-        body: Column(
+        body: ListView(
           children: [
             CardAppWidget(title: "hello", image: "", date: ""),
+            CardAppWidget(
+              title: "Hello item 2",
+              image:
+                  "https://apod.nasa.gov/apod/image/2604/CometR3_Hamdi_960.jpg",
+              date: "",
+            ),
             CardAppWidget(title: "hello", image: "", date: ""),
           ],
         ),

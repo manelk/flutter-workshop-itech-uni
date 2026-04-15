@@ -12,6 +12,8 @@
 // }
 ///
 /// LINK USED: https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
+///
+/// This file uses unamed constrctor
 
 import 'package:application_test/model/apod_model.dart';
 

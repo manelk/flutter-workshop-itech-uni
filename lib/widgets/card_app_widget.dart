@@ -20,21 +20,30 @@ class CardAppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 350,
+      height: MediaQuery.sizeOf(context).height * 0.4,
       width: 400,
       child: Card(
         clipBehavior: Clip.hardEdge,
         child: Column(
           children: [
-            Text(title ?? "default value"),
-            Text(date ?? "default value"),
+            Text(title),
+            Text(date ?? "default "),
             // Image.asset("assets/image1.jpeg"),
-            Image.network(
-              image!,
-              errorBuilder:
-                  (BuildContext context, Object error, StackTrace? stackTrace) {
-                    return Image.asset("assets/image1.jpeg");
-                  },
+            AspectRatio(
+              aspectRatio: 16 / 9,
+              child: Image.network(
+                // height: MediaQuery.sizeOf(context).height * 0.2,
+                // width: 200,
+                image!,
+                errorBuilder:
+                    (
+                      BuildContext context,
+                      Object error,
+                      StackTrace? stackTrace,
+                    ) {
+                      return Image.asset("assets/image1.jpeg");
+                    },
+              ),
             ),
           ],
         ),
