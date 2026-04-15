@@ -26,21 +26,24 @@ class _MyWidgetState extends State<CounterScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          "Hello $counter",
-          style: TextStyle(color: DesignColor().primaryColor, fontSize: 20),
-        ),
-        // Method 1
-        Text("Hello $name", style: styleNew),
-        // Method 2
-        Text(
-          "Hello $name",
-          style: GoogleFonts.arbutus(fontStyle: FontStyle.italic, fontSize: 20),
-        ),
-        TextButton(onPressed: increment, child: Text("Click to increment!")),
-      ],
+    return Scaffold(
+      appBar: AppBar(title: Text("Hello")),
+      body: Column(
+        children: [
+          Text(
+            "Hello Counter: $counter",
+            style: TextStyle(color: DesignColor().primaryColor, fontSize: 20),
+          ),
+          // Method 1: style
+          // Text("Hello $name", style: styleNew),
+          // Method 2: style
+          // Text(
+          //   "Hello $name",
+          //   style: GoogleFonts.arbutus(fontStyle: FontStyle.italic, fontSize: 20),
+          // ),
+          TextButton(onPressed: increment, child: Text("Click to increment!")),
+        ],
+      ),
     );
   }
 }
