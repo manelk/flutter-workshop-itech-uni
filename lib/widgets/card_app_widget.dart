@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../data/apod_data.dart';
-
 // new widget to display a text as a title and a description and image
 class CardAppWidget extends StatelessWidget {
   // Step 1: Add attributes to CardAppWidget

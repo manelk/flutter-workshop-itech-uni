@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/card_app_widget.dart';
-import 'widgets/home_screen.dart';
 import './data/apod_data.dart';
+import 'widgets/counter_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,16 +19,18 @@ class MyApp extends StatelessWidget {
       // step 2: call the widget
       home: Scaffold(
         appBar: AppBar(title: Text("App bar")),
-        body: ListView.builder(
-          itemCount: listItems.length,
-          itemBuilder: (context, index) {
-            return CardAppWidget(
-              title: listItems[index].title,
-              image: listItems[index].url,
-              date: listItems[index].date,
-            );
-          },
-        ),
+        body: CounterScreen(),
+
+        // ListView.builder(
+        //   itemCount: listItems.length,
+        //   itemBuilder: (context, index) {
+        //     return CardAppWidget(
+        //       title: listItems[index].title,
+        //       image: listItems[index].url,
+        //       date: listItems[index].date,
+        //     );
+        //   },
+        // ),
       ),
     );
   }
