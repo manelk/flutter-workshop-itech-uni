@@ -9,10 +9,12 @@ class CounterScreen extends StatefulWidget {
 
 class _MyWidgetState extends State<CounterScreen> {
   int counter = 0;
+  String name = "University";
 
   void increment() {
     setState(() {
       counter++;
+      name = "University Edited";
     });
   }
 
@@ -21,6 +23,7 @@ class _MyWidgetState extends State<CounterScreen> {
     return Column(
       children: [
         Text("Hello $counter"),
+        Text("Hello $name"),
         TextButton(onPressed: increment, child: Text("Click to increment!")),
       ],
     );
